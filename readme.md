@@ -4,7 +4,8 @@
 ---
 ## Authors
 
-* **Ari Kupferberg**  (akupferb)
+* **Ari Kupferberg**  (akupferb) - Driver
+* **Zuyang Cao**  (nuclearczy) - Navigator
 
 ## Overview
 
