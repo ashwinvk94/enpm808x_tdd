@@ -13,7 +13,13 @@ class PidController {
   double kp;
   double ki;
   double kd;
-  
+
+  /** @brief Error in previous time cycle. */
+  double previousError;
+
+  /** @brief Total error in previous time cycles. */
+  double integralError;
+
  public:
   /**
    * @brief Constructor with given values
@@ -67,5 +73,4 @@ class PidController {
    * @return kd - derivative gain.
    */
   double getKd();
-
 };
