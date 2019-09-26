@@ -1,4 +1,4 @@
-/**Copyright (C) 2019 Ari Kupferberg, Zuyang Cao
+/**@Copyright (C) 2019 Ari Kupferberg, Zuyang Cao
  * @file        PidController.hpp
  * @author      Ari Kupferberg, Zuyang Cao
  * @date        09/24/2019
@@ -7,9 +7,13 @@
 
 #pragma once
 
-#include<iostream>
-
 class PidController {
+ private:
+  /** @brief Proportional gain, integral gain and derivative gain. */
+  double kp;
+  double ki;
+  double kd;
+  
  public:
   /**
    * @brief Constructor with given values
@@ -17,25 +21,34 @@ class PidController {
    * @param ki - integral gain
    * @param kd - derivative gain
    */
-  PidController(const double& kp, const double& ki, const double& kd);
+  PidController(const double&, const double&, const double&);
+
+  /**
+   * @brief Compute function to calculate the control output
+   * @param actualVelocity - The current actual velocity
+   * @param desiredVelocity - The goal velocity
+   * @param previousError - The previous amount of error used for integral
+   * return controlValue - The controller overall gain
+   */
+  double compute(double&, double&, double&);
 
   /**
    * @brief Tune proportional gain.
    * @param kp - proportional gain
    */
-  void tuneKp(const double& kp);
+  void tuneKp(const double&);
 
   /**
    * @brief Tune integral gain.
    * @param ki - integral gain
    */
-  void tuneKi(const double& ki);
+  void tuneKi(const double&);
 
   /**
    * @brief Tune derivative gain.
    * @param kd - derivative gain
    */
-  void tuneKd(const double& kd);
+  void tuneKd(const double&);
 
   /**
    * @brief Get current proportional gain.
@@ -55,39 +68,4 @@ class PidController {
    */
   double getKd();
 
-  /**
-   * @brief Get time step value.
-   * @return dt - delta t or time step.
-   */
-  double getDt();
-
-  /**
-   * @brief Calculate and return the PID control output.
-   * @param velocitySetPoint - target velocity set point
-   * @param currentVelocity - current velocity
-   * @return controlOutput - control output from PID
-   */
-  double getControlOutput(const double& velocitySetPoint,
-                          const double& currentVelocity);
-
- private:
-  /** @brief Proportional gain, integral gain and derivative gain. */
-  double kp;
-  double ki;
-  double kd;
-
-  /** @brief Delta t or time step, set to 0.1 second. */
-  double dt = 0.1;
-
-  /** @brief Error in previous time step, set default to zero. */
-  double previousError = 0;
-
-  /** @brief Current error. */
-  double currentError;
-
-  /** @brief Accumulated error. */
-  double integralError;
-
-  /** @brief Current output of the PID controller. */
-  double controlOutput;
 };
