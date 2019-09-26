@@ -1,4 +1,4 @@
-/*!Copyright (C) 2019 Ari Kupferberg, Zuyang Cao
+/**Copyright (C) 2019 Ari Kupferberg, Zuyang Cao
  * @file        main.cpp
  * @author      Ari Kupferberg, Zuyang Cao
  * @date        09/24/2019
