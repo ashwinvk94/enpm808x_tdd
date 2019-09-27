@@ -22,6 +22,11 @@ class PidController {
 
  public:
   /**
+   * @brief Constructor without given values, expecting 0 value for every member
+   */
+  PidController();
+
+  /**
    * @brief Constructor with given values
    * @param kp - proportional gain
    * @param ki - integral gain
@@ -36,7 +41,7 @@ class PidController {
    * @param previousError - The previous amount of error used for integral
    * return controlValue - The controller overall gain
    */
-  double compute(double&, double&, double&);
+  double compute(const double&, const double&);
 
   /**
    * @brief Tune proportional gain.
