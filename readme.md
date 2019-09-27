@@ -4,16 +4,23 @@
 ---
 ## Authors
 
+Part 1
 * **Ari Kupferberg**  (akupferb) - Driver
 * **Zuyang Cao**  (nuclearczy) - Navigator
 
+Part 2
+
+* **Ashwin Varghese Kuruttukulam**  (ashwinvk94) - Driver
+* **Arpit Aggarwal**  (arp95) - Navigator
+
+
 ## Overview
 ```
-TDD Project build around a PID Controller, with focus on the compute() function for google testing.
+Team Driven Development Project to create a PID Controller, with a focus on the compute() function for google testing.
 ```
 
 ## Notes:
-Class design built with Stub functions. Added UML diagrams. Created Unit tests, checked to ensure they fail. Tested in Travis too? Part 1 complete?
+Current unit tests check the functionality of the proportional control, further tests can be written in order to check all functionalities of the PID controller.
 
 ## To Run:
 ```
