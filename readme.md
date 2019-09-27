@@ -8,8 +8,12 @@
 * **Zuyang Cao**  (nuclearczy) - Navigator
 
 ## Overview
-
+```
 TDD Project build around a PID Controller, with focus on the compute() function for google testing.
+```
+
+## Notes:
+Class design built with Stub functions. Added UML diagrams. Created Unit tests, checked to ensure they fail. Tested in Travis too? Part 1 complete?
 
 ## To Run:
 ```
