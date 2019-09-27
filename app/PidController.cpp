@@ -28,6 +28,7 @@ double PidController::compute(const double &actualVelocity,
   error = actualVelocity - desiredVelocity;
   PidController::integralError += error;
 
+
   double pidOut;
   pidOut = PidController::kp * error
       + PidController::ki * PidController::integralError
