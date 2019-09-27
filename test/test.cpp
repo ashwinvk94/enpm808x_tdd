@@ -32,8 +32,7 @@ TEST(PidControllerTest, testConstructor) {
  * Test compute method
  */
 TEST(PidControllerTest, testCompute) {
-  PidController testPid(1, 2, 3);
-  std::cout << "output" << testPid.compute(20, 10) << std::endl;
+  PidController testPid(1, 2, 3); 
   EXPECT_NEAR(60.0, testPid.compute(20, 10), 1.0);
 }
 
