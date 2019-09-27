@@ -15,7 +15,7 @@ PidController::PidController(const double& kp, const double& ki,
 double PidController::compute(const double& actualVelocity,
                               const double& desiredVelocity) {
   std::cout << "complete Me" << std::endl;
-return 0.0
+  return 0.0;
 }
 
 void PidController::tuneKp(const double& kp) {
@@ -31,7 +31,7 @@ void PidController::tuneKd(const double& kp) {
 }
 
 double PidController::getKp() {
-return kp;
+  return kp;
 }
 
 double PidController::getKi() {
