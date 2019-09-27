@@ -60,6 +60,4 @@ double PidController::getKi() {
 
 double PidController::getKd() {
   return kd;
-
 }
-

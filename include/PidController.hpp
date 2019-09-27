@@ -32,7 +32,7 @@ class PidController {
    * @param ki - integral gain
    * @param kd - derivative gain
    */
-  PidController(const double&, const double&, const double&);
+  PidController(const double, const double, const double);
 
   /**
    * @brief Compute function to calculate the control output
@@ -47,19 +47,19 @@ class PidController {
    * @brief Tune proportional gain.
    * @param kp - proportional gain
    */
-  void tuneKp(const double&);
+  void tuneKp(const double);
 
   /**
    * @brief Tune integral gain.
    * @param ki - integral gain
    */
-  void tuneKi(const double&);
+  void tuneKi(const double);
 
   /**
    * @brief Tune derivative gain.
    * @param kd - derivative gain
    */
-  void tuneKd(const double&);
+  void tuneKd(const double);
 
   /**
    * @brief Get current proportional gain.
