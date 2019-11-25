@@ -1,4 +1,4 @@
-# C++ Boilerplate
+# GMock Extra Credit
 [![Build Status](https://travis-ci.org/akupferb/enpm808x_tdd.svg?branch=master)](https://travis-ci.org/akupferb/enpm808x_tdd)
 [![Coverage Status](https://coveralls.io/repos/github/akupferb/enpm808x_tdd/badge.svg?branch=master)](https://coveralls.io/github/akupferb/enpm808x_tdd?branch=master)
 ---
@@ -15,9 +15,7 @@ Part 2
 
 
 ## Overview
-```
-Team Driven Development Project to create a PID Controller, with a focus on the compute() function for google testing.
-```
+GMock test Project for a PID Controller.
 
 ## Notes:
 Current unit tests check the functionality of the proportional control, further tests can be written in order to check all functionalities of the PID controller.
