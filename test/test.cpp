@@ -6,7 +6,28 @@
  */
 
 #include <gtest/gtest.h>
+#include <gmock/gmock.h>
+#include "../include/highLevelPID.h"
 #include "../include/PidController.hpp"
+
+// Mock PID Class
+ class MockPID : public PidController {
+   public:
+       MockPID() : PidController(2, 2, 0) {
+           }
+
+               MOCK_METHOD1(compute, double (double feedback,double desired));
+               };
+
+               // Test for Mock PID class
+               TEST(pidMockTest, pid) {
+                   MockPID mockPid;
+                       highLevelPID mypid(mockPid);
+			double b=20,a=10;
+                           EXPECT_CALL(mockPid, compute(b,a))
+                                 .Times(1);
+                                     ASSERT_EQ(mypid.compute(20,10), 60.0);
+}
 
 /**
  * Test class default constructor

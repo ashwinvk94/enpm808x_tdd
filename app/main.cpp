@@ -7,12 +7,13 @@
 
 #include <iostream>
 #include <PidController.hpp>
+#include <highLevelPID.h>
 
 int main() {
     PidController pid(1, 2, 3);
-    std::cout << "Kp value: " << pid.getKp() << std::endl;
-    std::cout << "Ki value: " << pid.getKi() << std::endl;
-    std::cout << "Kd value: " << pid.getKd() << std::endl;
-    std::cout << "Compute value: " << pid.compute(20, 10) << std::endl;
+    highLevelPID highlevelpid(pid);
+    double a=10;
+    double b=20;
+    std::cout << "Compute value: " << highlevelpid.compute(b, a) << std::endl;
     return 0;
 }
